@@ -1,0 +1,16 @@
+// @version=1
+study(title="EMA", shorttitle="EMA StrategyInd", overlay=true)
+exponential = input(true, title="Exponential MA")
+
+
+len1=input(14, title="Ema 1")
+len2=input(21, title="Ema 2")
+len3=input(50, title="Ema 3")
+
+M1=ema(close, len1)
+M2=ema(close, len2)
+M3=ema(close, len3)
+
+plot(M1, color=blue, title="14",  linewidth=2)
+plot(M2, color=green, title="21", linewidth=2)
+plot(M3, color=red, title="50", linewidth=2)
